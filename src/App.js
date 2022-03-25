@@ -5,6 +5,7 @@ import Header from './Component/Header/Header';
 import { useState } from 'react';
 import ShowCart from './Component/ShowCart/ShowCart';
 import Rendom from './Component/RandomlyLaptop/Random';
+import Question from './Component/Question/Question';
 
 
 function App() {
@@ -52,7 +53,9 @@ function App() {
         </div>
       </div>
       </section>
-        
+      <footer>
+        <Question></Question>
+      </footer>
     </div>
   );
 }
