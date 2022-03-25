@@ -26,7 +26,6 @@ function App() {
     setRand('none')
   }
 
- 
 
   const rendom =()=>{
     const rendomSelect = Math.floor(Math.random()*cart.length);
@@ -36,9 +35,12 @@ function App() {
     <div>
       <Header></Header>
       <section  className='product'>
-        <Laptops cart={cartAdd}></Laptops>
+        <div className="productContainer">
+          <Laptops cart={cartAdd}></Laptops>
+        </div>
       
-      <div>
+      <div className='cart-container'>
+
         <h2>Product info</h2>
         {
           cart.map(cart=><ShowCart cart={cart} newCart={delItem}/>)

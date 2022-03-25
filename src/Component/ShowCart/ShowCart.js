@@ -6,10 +6,10 @@ const ShowCart = (props) => {
     const delItem = props.newCart
   
     return (
-        <div>
+        <div className='cart'>
 
             <table>
-                <tr className='cart'>
+                <tr>
                     <td><img src={image} alt=""  className='cart-img' /></td>
                     <td>{name.substr(0, 30)}..</td>
                     <td>

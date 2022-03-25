@@ -3,6 +3,14 @@
   grid-template-columns: 4fr 1fr;
 }
 @media only screen and (max-width: 649.5px) {
+  .cart-container{
+    order: 1;
+    width: 100%;
+    background-color: aliceblue;
+  }
+  .productContainer{
+    order: 2;
+  }
   .product{
     display: flex;
     flex-direction: column;

@@ -4,13 +4,13 @@
     width: 300px;
     height: 500px;
     position: relative;
-}
-@media only screen and (max-width: 650px) {
+} 
+/* @media only screen and (max-width: 650px) {
     .laptops{
       display: grid;
       grid-template-columns:1fr 1fr;
     }
-}
+} */
 @media only screen and (max-width: 649.5px) {
     .laptop{
       width: 90%;
