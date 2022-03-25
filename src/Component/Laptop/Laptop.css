@@ -1,0 +1,52 @@
+.laptop{
+    box-shadow: 0 0 5px;
+    border-radius:10px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+}
+@media only screen and (max-width: 650px) {
+    .laptops{
+      display: grid;
+      grid-template-columns:1fr 1fr;
+    }
+}
+@media only screen and (max-width: 649.5px) {
+    .laptop{
+      width: 90%;
+    }
+}
+.laptop img{
+    border-radius: 10px;
+    width: 286px;
+    height: 286px;
+    padding: 5px;
+    margin: 5px;
+}
+.name{
+    font-size: 20px;
+    padding: 0 5px;
+}
+.price{
+    margin: 0;
+    padding: 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.laptop button{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(230, 165, 45);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    height: 32px;
+    border-radius: 0 0 10px 10px;
+}
+.laptop button:hover{
+    background-color: orange;
+    color: white;
+}

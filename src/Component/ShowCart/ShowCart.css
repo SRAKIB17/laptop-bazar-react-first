@@ -1,0 +1,13 @@
+.cart-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.cart{
+    border-radius: 10px;
+    margin-left: 0;
+    padding: 4px;
+    box-shadow: 0 0 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
