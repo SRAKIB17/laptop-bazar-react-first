@@ -18,7 +18,7 @@ function App() {
   })
   // delete a item from a cart 
   const delItem = (id)=>{
-    console.log(id)
+    setCart(cart.filter(laptop => laptop.id != id))
   }
   return (
     <div>
