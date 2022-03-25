@@ -10,23 +10,27 @@ import Rendom from './Component/RandomlyLaptop/Random';
 function App() {
   const [cart, setCart] =useState([])
   const cartAdd = (laptop) =>{
-    setCart([...cart, laptop]);
-  }
-  const [remove, setRemove] = useState('block')
-  const [choose, setchoose] = useState('block')
-  useState(()=>{
-    // cart.length
-  })
-  // delete a item from a cart 
-  const delItem = (id)=>{
-    setCart(cart.filter(laptop => laptop.id != id))
+    if(!cart.includes(laptop)){
+      setCart([...cart, laptop]);
+    }
+    else{
+      alert("Already add this item")
+    }
+    
   }
   const [rend, setRendom] = useState({});
   const [showRand, setRand] = useState('none')
+  // delete a item from a cart 
+  const delItem = (id)=>{
+    setCart(cart.filter(laptop => laptop.id !== id))
+    setRand('none')
+  }
+
+ 
+
   const rendom =()=>{
     const rendomSelect = Math.floor(Math.random()*cart.length);
-    setRendom(cart[rendomSelect])
-    
+    setRendom({...cart[rendomSelect],showRandom: setRand})
   }
   return (
     <div>
@@ -39,9 +43,9 @@ function App() {
         {
           cart.map(cart=><ShowCart cart={cart} newCart={delItem}/>)
         }
-        <button style={{display: remove}} className='cartButton buttonRemove' onClick={()=>setCart([])}>Remove all</button>
-        <button onClick={rendom} style={{display: choose}} className='cartButton buttonRandom'>Choose Rendomly</button>
-        <div>
+        <button className='cartButton buttonRemove' onClick={()=>setCart([])}>Remove all</button>
+        <button onClick={rendom} className='cartButton buttonRandom'>Choose Rendomly</button>
+        <div style={{display: showRand}}>
           <Rendom rend={rend}></Rendom>
         </div>
       </div>

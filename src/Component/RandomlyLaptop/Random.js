@@ -1,10 +1,12 @@
 import React from 'react';
 
 const Random = (props) => {
-    const {name,image} = props.rend
+    const {name,image,showRandom} = props.rend
     let nameChoose = ''
     let imageChoose = ''
-    if(name && image){
+    
+    if(name && image && showRandom){
+        showRandom('block')
         nameChoose = name;
         imageChoose = image
     }
