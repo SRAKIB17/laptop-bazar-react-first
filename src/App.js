@@ -4,6 +4,7 @@ import Laptops from './Component/Laptops/Laptops';
 import Header from './Component/Header/Header';
 import { useState } from 'react';
 import ShowCart from './Component/ShowCart/ShowCart';
+import Rendom from './Component/RandomlyLaptop/Random';
 
 
 function App() {
@@ -20,6 +21,13 @@ function App() {
   const delItem = (id)=>{
     setCart(cart.filter(laptop => laptop.id != id))
   }
+  const [rend, setRendom] = useState({});
+  const [showRand, setRand] = useState('none')
+  const rendom =()=>{
+    const rendomSelect = Math.floor(Math.random()*cart.length);
+    setRendom(cart[rendomSelect])
+    
+  }
   return (
     <div>
       <Header></Header>
@@ -32,7 +40,10 @@ function App() {
           cart.map(cart=><ShowCart cart={cart} newCart={delItem}/>)
         }
         <button style={{display: remove}} className='cartButton buttonRemove' onClick={()=>setCart([])}>Remove all</button>
-        <button style={{display: choose}} className='cartButton buttonRandom'>C</button>
+        <button onClick={rendom} style={{display: choose}} className='cartButton buttonRandom'>Choose Rendomly</button>
+        <div>
+          <Rendom rend={rend}></Rendom>
+        </div>
       </div>
       </section>
         
