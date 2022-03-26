@@ -2,7 +2,7 @@
 import './App.css';
 import Laptops from './Component/Laptops/Laptops';
 import Header from './Component/Header/Header';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ShowCart from './Component/ShowCart/ShowCart';
 import Rendom from './Component/RandomlyLaptop/Random';
 import Question from './Component/Question/Question';
@@ -21,6 +21,7 @@ function App() {
   }
   const [rend, setRendom] = useState({});
   const [showRand, setRand] = useState('none')
+  
   // delete a item from a cart 
   const delItem = (id)=>{
     setCart(cart.filter(laptop => laptop.id !== id))
@@ -32,6 +33,7 @@ function App() {
     const rendomSelect = Math.floor(Math.random()*cart.length);
     setRendom({...cart[rendomSelect],showRandom: setRand})
   }
+  
   return (
     <div>
       <Header></Header>

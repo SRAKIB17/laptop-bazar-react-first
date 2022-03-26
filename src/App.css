@@ -1,6 +1,6 @@
 .product{
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 @media only screen and (max-width: 649.5px) {
   .cart-container{
